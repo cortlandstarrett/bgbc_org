@@ -1,11 +1,12 @@
 :root {
-  --bg: #f4f4f2;
-  --surface: #ffffff;
-  --text: #1f2428;
+  /* Heritage Radcliffe vintage + customizer backgrounds */
+  --bg: #cccccc;          /* page chrome, header, footer */
+  --surface: #b5b5b5;     /* middle content pane (article) */
+  --text: #222222;
   --muted: #5c6570;
   --accent: #2b6e9d;
   --accent-dark: #1f5275;
-  --border: #d5d8dc;
+  --border: #c7c4b4;
   --content-width: 42rem;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Source Serif 4", Georgia, serif;
@@ -30,9 +31,7 @@ body {
   font-size: 1.0625rem;
   line-height: 1.6;
   color: var(--text);
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(43, 110, 157, 0.08), transparent 55%),
-    linear-gradient(180deg, #ebeae6 0%, var(--bg) 28%, var(--bg) 100%);
+  background: var(--bg);
 }
 
 a {
@@ -65,10 +64,21 @@ img {
   left: 0.5rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-header {
   border-bottom: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
+  background: var(--bg);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -117,16 +127,20 @@ img {
 }
 
 .site-brand__name {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.2;
+}
+
+.site-brand__name strong {
+  font-weight: 700;
 }
 
 .site-brand__tagline {
   font-size: 0.82rem;
   color: var(--muted);
-  font-style: italic;
+  font-style: normal;
 }
 
 .site-nav ul {
@@ -154,46 +168,68 @@ img {
 
 .site-main {
   flex: 1;
-  padding: 2rem 0 3rem;
+  padding: 2rem 1rem 3rem;
+  background: var(--surface);
+  box-sizing: border-box;
 }
 
 .site-footer {
   border-top: 1px solid var(--border);
-  background: #ebeae6;
-  padding: 1.75rem 0;
+  background: var(--bg);
+  padding: 1.25rem 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-.site-footer__name {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-  font-weight: 700;
+.site-footer__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  align-items: baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.45;
 }
 
-.site-footer p {
-  margin: 0 0 0.75rem;
+.site-footer__contact a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-footer__contact a:hover,
+.site-footer__contact a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .hero {
   padding: 1.5rem 0 0.5rem;
 }
 
-.hero__identity {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+/* EXPERIMENT: full-viewport-width hero. Undo = remove .hero--full-bleed
+   from index.md and delete this rule block (and the html overflow-x line). */
+html:has(.hero--full-bleed) {
+  overflow-x: hidden;
 }
 
-.hero__logo {
-  width: 96px;
-  height: 96px;
-  flex-shrink: 0;
+.hero--full-bleed {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0 0 0.5rem;
+}
+
+.hero--full-bleed .hero__photo {
+  border: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .hero__brand {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 700;
   line-height: 1.15;
@@ -202,24 +238,17 @@ img {
 }
 
 .hero__lede {
-  margin: 0;
+  margin: 0 0 1.25rem;
   font-size: 1.15rem;
   color: var(--muted);
   max-width: 36rem;
+  font-style: normal;
 }
 
 .hero__photo {
   display: block;
   width: 100%;
-  margin-top: 0.5rem;
   border: 1px solid var(--border);
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  margin-bottom: 2rem;
 }
 
 .button {
@@ -418,11 +447,6 @@ img {
 
   .site-nav ul {
     gap: 0.5rem 0.85rem;
-  }
-
-  .hero__identity {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .person {

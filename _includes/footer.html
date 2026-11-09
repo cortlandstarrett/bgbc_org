@@ -1,13 +1,9 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <p class="site-footer__name">{{ site.data.site.name }}</p>
-    <p>
-      {{ site.data.site.address }}<br>
-      {{ site.data.site.city }}, {{ site.data.site.state }} {{ site.data.site.zip }}
-    </p>
-    <p>
-      <a href="tel:{{ site.data.site.phone | replace: '(', '' | replace: ')', '' | replace: ' ', '-' | replace: '.', '-' }}">{{ site.data.site.phone }}</a><br>
-      <a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a>
-    </p>
+    <ul class="site-footer__contact">
+      <li><a href="{{ site.data.site.maps_url }}">{{ site.data.site.address }}, {{ site.data.site.city }}, {{ site.data.site.state }} {{ site.data.site.zip }}</a></li>
+      <li><a href="tel:{{ site.data.site.phone_tel }}">{{ site.data.site.phone }}</a></li>
+      <li><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></li>
+    </ul>
   </div>
 </footer>
