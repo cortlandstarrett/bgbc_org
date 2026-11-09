@@ -1,0 +1,95 @@
+= Migrate bgbc.org to Jekyll with GitHub Pages
+
+BGBC Analysis Note
+
+== 1 Abstract
+
+This note documents work to migrate bgbc.org from WordPress.com to Jekyll
+with GitHub Pages.
+
+== 2 Introduction and Background
+
+bgbc.org serves the needs of a small church congregation.  It is used to
+communicate lesson topics and materials, recorded sermons and staff
+contact information.
+
+The current bgbc.org site is hosted on a site powered by WordPress.com.
+
+The current production bgbc.org site can be used as a source for the
+migration into GitHub using Jekyll and GitHub Pages.
+
+The target of the migration is a git repository, cortlandstarrett/bgbc_org
+hosted on GitHub and cloned locally to my MacOS laptop.
+
+== 3 Requirements
+
+=== 3.1 Clean, Utilitarian Look and Feel
+
+Achieve a clean look with an emphasis on ease of use.  The target user is
+a church parishioner.  Using a Jekyll theme would be permissible but is
+not a requirement.
+
+=== 3.3 Simplified Maintenance
+
+The site maintainers have experience with git repositories and GitHub in
+particular.  It is important that source material be primarily plaintext
+files.  Markdown is preferred over HTML when feasible.
+
+It is expected that when an update is pushed to the main branch that the
+site will build automatically using GitHub Actions.
+
+=== 3.4 Jekyll and GitHub Pages
+
+Use Jekyll and GitHub Pages unless a better recommendation is forthcoming.
+
+Follow Jekyll and GitHub Pages best practices whenever feasible.
+
+=== 3.4 Eliminate References to the Heritage WordPress Site
+
+Migrate images and documents from the source WordPress site.  Minimize
+references to the heritage site.  The heritage site will be removed after
+the migration is complete.
+
+=== 3.5 Eliminate WordPress Infrastructure
+
+The heritage site depends upon a number of WordPress plugins and other
+infrastructure.  Eliminate these dependencies.  When a dependency is
+needed for functionality, propose alternatives including simply
+eliminating the functionality.
+
+=== 3.6 Sermon Audio 
+
+The heritage site contains sermon audio files.  It is important that these
+files are stored by date and easy to upload, locate and replace.
+
+== 4 Procedure
+
+=== 4.1 Analysis of Existing Artifacts
+
+* Read this note.
+* Inspect the heritage site.
+* Evaluate the target repository (cortlandstarrett/bgbc_org and local clone).
+
+=== 4.2 Recommendations
+
+* Recommend layout, color scheme, look and feel.
+* Recommend steps to meet requirements.
+
+=== 4.3 Clean Start
+
+Initialize the cortlandstarrett/bggc_org git repository with a base functional
+Jekyll site.
+
+=== 4.4 Incremental Update
+
+* As work proceeds avoid "breaking" the site such that it does not build
+  through GitHub Actions.
+* Commit coherent sets of changes that can be reveiwed as source and
+  through the published GitHub Pages web access.
+
+
+---
+
+This work is licensed under the Creative Commons CC0 License
+
+---
