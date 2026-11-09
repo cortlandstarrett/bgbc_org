@@ -1,0 +1,12 @@
+<section class="person">
+  {% if include.person.image %}
+  <img class="person__photo" src="{{ include.person.image | relative_url }}" alt="{{ include.person.name }}" width="200" height="240" loading="lazy">
+  {% endif %}
+  <div class="person__body">
+    <h3 class="person__name">{{ include.person.name }}</h3>
+    {% if include.person.role %}
+    <p class="person__role">{{ include.person.role }}</p>
+    {% endif %}
+    <p class="person__bio">{{ include.person.bio }}</p>
+  </div>
+</section>

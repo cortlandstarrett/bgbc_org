@@ -92,11 +92,11 @@ img {
 
 .site-brand {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
   color: var(--text);
-  max-width: 18rem;
+  max-width: 22rem;
 }
 
 .site-brand:hover,
@@ -104,15 +104,27 @@ img {
   color: var(--accent-dark);
 }
 
+.site-brand__logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.site-brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
 .site-brand__name {
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .site-brand__tagline {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--muted);
   font-style: italic;
 }
@@ -167,20 +179,40 @@ img {
   padding: 1.5rem 0 0.5rem;
 }
 
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero__logo {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+}
+
 .hero__brand {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 700;
   line-height: 1.15;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   color: var(--text);
 }
 
 .hero__lede {
-  margin: 0 0 1.5rem;
+  margin: 0;
   font-size: 1.15rem;
   color: var(--muted);
   max-width: 36rem;
+}
+
+.hero__photo {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
 }
 
 .hero__actions {
@@ -331,11 +363,52 @@ img {
   margin-top: 2rem;
 }
 
-.stub-note {
-  padding: 0.85rem 1rem;
-  background: rgba(43, 110, 157, 0.08);
-  border-left: 3px solid var(--accent);
-  color: var(--muted);
+.person {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1rem 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.person:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.person__photo {
+  width: 7.5rem;
+  height: 9rem;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.person__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 0.2rem;
+}
+
+.person__role {
+  margin: 0 0 0.6rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.person__bio {
+  margin: 0;
+  color: var(--text);
+}
+
+.prose pre,
+.creed {
+  white-space: pre-wrap;
+  font-family: var(--font-body);
+  line-height: 1.55;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  overflow-x: auto;
 }
 
 @media (max-width: 640px) {
@@ -345,5 +418,19 @@ img {
 
   .site-nav ul {
     gap: 0.5rem 0.85rem;
+  }
+
+  .hero__identity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .person {
+    grid-template-columns: 5.5rem 1fr;
+  }
+
+  .person__photo {
+    width: 5.5rem;
+    height: 6.5rem;
   }
 }

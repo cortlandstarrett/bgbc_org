@@ -11,11 +11,14 @@ email: battlegroundbible@gmail.com
 
 service_times:
   - label: Sunday Morning Worship
-    detail: Sundays at 10:30 AM
-  - label: Midweek
-    detail: See Ministries for current schedule
+    detail: Sundays 9:00–10:30 AM
+  - label: Sunday School / Fellowship Groups
+    detail: Sundays 10:45–11:45 AM
+  - label: Wednesday Evening Ministries
+    detail: 6:30–8:00 PM (seasonal — see Ministries)
 
 social:
-  facebook: https://www.facebook.com/groups/
-  instagram: https://www.instagram.com/
-  livestream: https://www.facebook.com/
+  facebook: https://www.facebook.com/groups/battlegroundbible/
+  instagram: https://www.instagram.com/battlegroundbiblechurch/
+  livestream: https://www.facebook.com/groups/battlegroundbible/
+  youtube_playlist: https://www.youtube.com/playlist?list=PLeztkQEBIgZt8f8BH71SkwKG11nOksw2Y

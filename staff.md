@@ -3,6 +3,26 @@ title: Staff
 permalink: /staff/
 ---
 
-<p class="stub-note">Staff bios and photos will be migrated from the heritage site in a later phase.</p>
+## Senior Pastor & Elders
 
-Senior Pastor & Elders, Deacons, Trustees, and Support Staff pages will appear here.
+{% for person in site.data.people.elders %}
+{% include person.html person=person %}
+{% endfor %}
+
+## Deacons
+
+{% for person in site.data.people.deacons %}
+{% include person.html person=person %}
+{% endfor %}
+
+## Trustees
+
+{% for person in site.data.people.trustees %}
+{% include person.html person=person %}
+{% endfor %}
+
+## Support Staff
+
+{% for person in site.data.people.support_staff %}
+{% include person.html person=person %}
+{% endfor %}

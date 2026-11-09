@@ -2,8 +2,11 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-brand" href="{{ '/' | relative_url }}">
-      <span class="site-brand__name">{{ site.data.site.name }}</span>
-      <span class="site-brand__tagline">{{ site.data.site.tagline }}</span>
+      <img class="site-brand__logo" src="{{ '/assets/images/brand/logo-pillar.png' | relative_url }}" alt="" width="48" height="48">
+      <span class="site-brand__text">
+        <span class="site-brand__name">{{ site.data.site.name }}</span>
+        <span class="site-brand__tagline">{{ site.data.site.tagline }}</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Primary">
       <ul>
