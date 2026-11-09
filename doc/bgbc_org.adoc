@@ -67,6 +67,8 @@ files are stored by date and easy to upload, locate and replace.
 === 4.1 Analysis of Existing Artifacts
 
 * Read this note.
+* Read migration-analysis.md.  This an analysis already performed but set
+  aside while further research was done elsewhere.
 * Inspect the heritage site.
 * Evaluate the target repository (cortlandstarrett/bgbc_org and local clone).
 
@@ -77,8 +79,10 @@ files are stored by date and easy to upload, locate and replace.
 
 === 4.3 Clean Start
 
-Initialize the cortlandstarrett/bgbc_org git repository with a base functional
-Jekyll site.
+* Initialize the cortlandstarrett/bgbc_org git repository with a base functional
+  Jekyll site.
+* Plan to migrate audio files as a later step.  Get the site layout,
+  look-and-feel and other requirements fulfilled first.
 
 === 4.4 Incremental Update
 
