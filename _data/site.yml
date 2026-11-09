@@ -1,0 +1,21 @@
+name: Battle Ground Bible Church
+short_name: BGBC
+tagline: a passion for God and compassion for people
+
+address: 2430 E 600 North
+city: W Lafayette
+state: IN
+zip: "47906"
+phone: "(765) 567-2844"
+email: battlegroundbible@gmail.com
+
+service_times:
+  - label: Sunday Morning Worship
+    detail: Sundays at 10:30 AM
+  - label: Midweek
+    detail: See Ministries for current schedule
+
+social:
+  facebook: https://www.facebook.com/groups/
+  instagram: https://www.instagram.com/
+  livestream: https://www.facebook.com/

@@ -1,0 +1,42 @@
+title: Battle Ground Bible Church
+description: >-
+  A passion for God and compassion for people.
+url: "https://cortlandstarrett.github.io"
+baseurl: "/bgbc_org"
+
+# Audio files are hosted separately (object storage later).
+# Leave blank while working out site operation with few/no audio files.
+audio_base_url: ""
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  sermons:
+    output: true
+    permalink: /sermons/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "sermons"
+    values:
+      layout: "sermon"
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - doc
+  - README.md
+  - LICENSE
+  - .gitignore
